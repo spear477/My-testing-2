@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+         body{
+             color:#8c8c8c ;
+             background-color:#534343 ;
+
+         }
+
+
+        .header{
+            width: 324px;
+            height: auto;
+            margin: 200px auto;
+            border: 2px solid #22050582;
+            border-radius: 20px;
+            background-color: #2f1212d9
+            
+        }
+        #result{
+            display: inline-block;
+            width: 200px;
+            height: 20px;
+
+        }
+        #width{
+             border-radius: 20px;
+             height: 20px;            
+        }
+        #breath{
+             border-radius: 20px; 
+             height: 20px;
+
+        }
+
+    </style>
+</head>
+<body>
+ 
+        <fieldset class="header">
+            <legend class="legend">
+                <i class="fas fa-calculator fa-aw"></i>
+                Calculator
+            </legend>
+       
+            <div>
+            <span>Result:</span>
+            <span id="result"></span>
+            <button onclick="addList()">
+                <i class="fas fa-save fa-aw"></i> 
+                </button>
+            <button onclick="clearResult()">Clear</button>
+            </div>
+            <br>
+            <div>
+            <input type="number" id="width" placeholder="width" style="color: rgb(11, 11, 12); ">
+            <input type="number" id="breath" placeholder="breath" style="color: rgb(11, 11, 12);" >
+            <br>
+            <br>
+            <button onclick="calcArea()">
+                <i class=""></i>
+                Calaculate</button>
+
+            </div>
+            <ul id="list"></ul>
+        </fieldset> 
+     <script>
+        let width = document.getElementById("width")
+        let breath = document.getElementById("breath")
+        let result = document.getElementById("result")
+        let list = document.getElementById("list")
+        
+        function calcArea(){
+            if(width.value==0||breath.value==0){
+                 alert("pls fill")
+            }else{
+  
+              let area =width.value*breath.value;
+              result.innerHTML = `${width.value}ft x ${breath.value}ft=${area} ft<sup>2</sup>`;
+              width.value="";
+              breath.value="";
+            }
+     
+        }
+        function addList(){
+            if(result.innerHTML==""){
+                alert("Empty result")
+            }else{
+              list.innerHTML +=`<li>${result.innerHTML}</li>`;
+              clearResult();
+            } 
+        }
+        function clearResult(){
+            result.innerHTML ="";
+        }
+      </script>
+</body>
+</html>

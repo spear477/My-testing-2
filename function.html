@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script> 
-   
-    
+<body > 
+      <h1 id="bb">min ga lr pr</h1>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro dolor officia iste fuga necessitatibus aperiam molestiae culpa repudiandae non, hic temporibus consequuntur quibusdam quae ut assumenda reiciendis. Itaque, tempora animi!</p>
+     <input type="text" id="text">
+    <button onclick="ChangeHeader()"> Click me</button>
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+
+    <script>
+    let i= document.getElementById("text")
+    let h=document.getElementById("bb")
+      function ChangeHeader(){
+          let text=i.value;
+          h.innerText=text;
+      }
     </script>
 </body>
 </html>
