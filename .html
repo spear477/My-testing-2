@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let b=document.createElement("button")
+        let c=document.createTextNode("Click me")
+          b=document.body.append(c)
+        const marks= [330,445,443,555,666,] ;
+
+        let newArr = marks.reduce(function(p,c){
+          console.log(p,c);
+          return p+c;
+          
+        },0);
+        console.log(newArr);
+
+    let newOne=marks.filter(function(el){
+        return el.length>2;
+    }).join(" ,");
+      
+        
+    </script>
+</body>
+</html>

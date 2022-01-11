@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+          fieldset{
+              display: inline-block;
+              border-radius: 3px;
+          }
+         .box{
+             margin-top: 100px ;
+             text-align: center;
+         }
+     </style>
+</head>
+<body>
+    <form action="" id="form">
+      <div class="box">
+          <fieldset>
+              <legend>Text</legend>
+
+              <label for=""> Text</label>
+              <input type="text" id="text" required>   
+
+              <label for="">Color</label>
+              <input type="color" id="color">
+
+              <label for="">Font-size</label>
+              <input type="range" id="fontsize" min="0" max="100" value="10">  
+
+              <label for="">Font style</label>
+              <select name="" id="aa">
+                  <option value="Terminal">Terminal</option>
+                  <option value="Onyx Regular">Onyx Regular</option>
+                  <option value="Ebrima">Ebrima</option>
+                  <option value="French Script Mt Regular">French Script Mt Regular</option>
+              </select>
+              <button>Submit</button>
+          </fieldset>
+          <p id="output">FFFFF</p>
+      </div>
+    </form>
+      <script> 
+          
+          let output =document.getElementById("output")
+          let text =document.getElementById("text")
+          let color =document.getElementById("color")
+          let fontsize =document.getElementById("fontsize")
+          let fontfamily=document.getElementById("aa")
+
+
+
+        //   text.addEventListener("keyup",function(){
+        //       output.innerText=text.value;
+        //   });
+         
+        //   color.addEventListener("change",function(){
+        //      output.style.color=this.value;
+        //   });
+        //   fontsize.addEventListener("change",function(){
+        //       output.style.fontSize=this.value +'px';
+        //   }) ;
+        //   fontfamily.addEventListener("change",function(){
+        //       output.style.fontFamily=this.value;
+
+        //   })
+           
+       document.getElementById("form").addEventListener("submit",function(e){
+            e.preventDefault();
+            output.innerText=text.value;
+            output.style.color=color.value;
+            output.style.fontSize=fontsize.value +'px';
+            output.style.fontFamily=fontfamily.value;
+            this.reset();
+
+
+       })
+
+
+
+      </script>
+</body>
+</html>
