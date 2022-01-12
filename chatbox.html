@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 100px;
+            background-color: indigo;
+            border-radius: 20px;
+            position: relative;
+        }
+        .box::after{
+            content: "";
+            position: absolute;
+            bottom:-50px;
+            left: 200px;
+            border: 25px solid white;
+            display: inline-block;
+            border-top-color: indigo;
+
+        }
+        /* .tail{
+            background: indigo;
+            border: 20px solid white;
+            border-top-color: indigo;
+            margin-left: 200px;
+            display: inline-block;
+
+
+        } */
+        .v{
+            width:678px;
+            height: 284px;
+            background-color:rgb(10, 247, 235) ;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            border-radius: 50%;
+        }
+        .v::after{
+          
+            content: "";
+            position: absolute;
+            bottom: -83px;
+            left: 300px;
+            border: 42px solid white;
+            border-top-color: white;
+           display: inline-block;
+           border-top-color: rgb(10, 247, 235);
+
+
+        }
+    </style>
+</head>
+<body>
+   <div class="box"></div>
+   <!-- <div class="tail"></div> -->
+    
+
+
+   <div class="v"></div>
+</body>
+</html>
